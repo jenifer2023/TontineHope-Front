@@ -1,0 +1,65 @@
+<main class="">
+  <div class="h-screen w-full grid grid-cols-1 md:grid-cols-2">
+     <div style="background-color: rgba(106, 202, 246, 0.123);" class="hidden md:flex justify-center items-center ">
+        <img class="w-2/3 h-auto" src="./assets/img/Manage money-amico.png" alt="" />
+     </div>
+     <div class="py-10 w-2/3 mx-auto">
+        <div class="h-16 w-16 overflow-hidden">
+           <img class="w-full h-full" src="./logo-white.png" alt="" />
+        </div>
+        <h1 class="text-3xl font-extrabold mt-3 mb-5">Bienvenue sur Tontine Hope</h1>
+        <form class="flex flex-col space-y-3" (ngSubmit)="onSubmit()">
+           <div>
+              <label class="block mb-1 text-base text-gray-400" for="nom">Nom d’utilisateur</label>
+              <div style="background-color: rgba(106, 202, 246, 0.123);" class="rounded-lg w-full">
+                 <input type="text" name="username" class="w-full block flex-1 bg-transparent rounded-lg py-3 pl-4
+              text-gray-900 ring-1 ring-inset ring-gray-50 placeholder:text-gray-400
+              placeholder:text-sm sm:text-sm sm:leading-6" placeholder="Votre nom*" />
+              </div>
+           </div>
+
+           <div>
+              <label class="block mb-1 text-base text-gray-400" for="nom">Mot de passe</label>
+              <div style="background-color: rgba(106, 202, 246, 0.123);" class="rounded-lg w-full">
+                 <input type="password" name="password" class="w-full block flex-1 bg-transparent rounded-lg py-3 pl-4
+              text-gray-900 ring-1 ring-inset ring-gray-50 placeholder:text-gray-400
+              placeholder:text-sm sm:text-sm sm:leading-6" placeholder="Votre mot de passe*" />
+              </div>
+           </div>
+
+           <div class="flex flex-1 justify-between items-center">
+              <div class="flex items-center">
+                 <input class="h-3 w-3 cursor-pointer" name="remember-me" type="checkbox" checked>
+                 <label for="remember-me" class="text-xs text-gray-400 ml-1">Se souvenir de moi</label>
+              </div>
+              <div>
+                 <span style="color: var(--blue-color);" class="text-xs cursor-pointer">Mot de passe oublié ?</span>
+              </div>
+           </div>
+
+           <div class="pt-5">
+              <button type="submit" class="w-full text-lg font-semibold py-2 bg-blue-500 rounded-lg u">Se
+                 connecter</button>
+           </div>
+           <p class="text-xs text-gray-500 pt-3">N’avez-vous pas de compte ?
+              <span style="color: var(--blue-color);" class="cursor-pointer">Créer un compte</span>
+           </p>
+
+           <div class="flex items-center">
+              <hr class="flex-1" />
+              <span class="w-auto mx-3 text-gray-400 text-xs font-medium">Or</span>
+              <hr class="flex-1" />
+           </div>
+
+           <div class="flex justify-center items-center gap-x-5">
+              <div class="google p-2 h-12 w-12 rounded-full bg-white shadow-sm shadow-gray-300">
+                 <img class="w-full h-full" src="./assets/img/google.png" alt="" />
+              </div>
+              <div class="facebook p-2 h-12 w-12 rounded-full bg-white shadow-sm shadow-gray-300">
+                 <img class="w-full h-full" src="./assets/img/facebook.png" alt="" />
+              </div>
+           </div>
+        </form>
+     </div>
+  </div>
+</main>
