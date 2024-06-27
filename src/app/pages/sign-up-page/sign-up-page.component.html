@@ -1,0 +1,83 @@
+<main class="">
+   <div class="h-screen w-full grid grid-cols-1 md:grid-cols-2">
+      <div style="background-color: rgba(106, 202, 246, 0.123);" class="hidden md:flex justify-center items-center ">
+         <img class="w-2/3 h-auto" src="./assets/img/Profile Interface-rafiki.png" alt="" />
+      </div>
+      <div class="py-8 px-8 md:px-10 lg:px-16">
+         <div class="h-16 w-16 overflow-hidden">
+            <img class="w-full h-full" src="./logo-white.png" alt="" />
+         </div>
+         <h1 class="text-3xl font-extrabold my-3">Création de compte</h1>
+         <p class="text-xs text-gray-400 mb-5">Créez votre compte puis bénéficiez de la gestion automatisée de votre
+            association en toute sécurité et libérez vous des routines!</p>
+         <form class="flex flex-col space-y-3" (ngSubmit)="onSubmit()">
+            <div>
+               <label class="block mb-1 text-base text-gray-400" for="email">Adresse E-mail</label>
+               <div style="background-color: rgba(106, 202, 246, 0.123);" class="rounded-lg w-full">
+                  <input type="text" name="email" class="w-full block flex-1 bg-transparent rounded-lg py-3 pl-4
+              text-gray-900 ring-1 ring-inset ring-gray-50 placeholder:text-gray-400
+              placeholder:text-sm sm:text-sm sm:leading-6" placeholder="Ex: johndoe@gmail.com" />
+               </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-3">
+               <div>
+                  <label class="block mb-1 text-base text-gray-400" for="nom">Nom</label>
+                  <div style="background-color: rgba(106, 202, 246, 0.123);" class="rounded-lg w-full">
+                     <input type="text" name="nom" class="w-full block flex-1 bg-transparent rounded-lg py-3 pl-4
+                     text-gray-900 ring-1 ring-inset ring-gray-50 placeholder:text-gray-400
+                     placeholder:text-sm sm:text-sm sm:leading-6" placeholder="Votre nom*" />
+                  </div>
+               </div>
+               <div>
+                  <label class="block mb-1 text-base text-gray-400" for="nom">Prénom</label>
+                  <div style="background-color: rgba(106, 202, 246, 0.123);" class="rounded-lg w-full">
+                     <input type="text" name="prenom" class="w-full block flex-1 bg-transparent rounded-lg py-3 pl-4
+                     text-gray-900 ring-1 ring-inset ring-gray-50 placeholder:text-gray-400
+                     placeholder:text-sm sm:text-sm sm:leading-6" placeholder="Votre prenom*" />
+                  </div>
+               </div>
+               <div>
+                  <label class="block mb-1 text-base text-gray-400" for="nom">Mot de passe</label>
+                  <div style="background-color: rgba(106, 202, 246, 0.123);" class="rounded-lg w-full">
+                     <input type="password" name="password" class="w-full block flex-1 bg-transparent rounded-lg py-3 pl-4
+                     text-gray-900 ring-1 ring-inset ring-gray-50 placeholder:text-gray-400
+                     placeholder:text-sm sm:text-sm sm:leading-6" placeholder="******" />
+                  </div>
+               </div>
+               <div>
+                  <label class="block mb-1 text-base text-gray-400" for="nom">Confirmer</label>
+                  <div style="background-color: rgba(106, 202, 246, 0.123);" class="rounded-lg w-full">
+                     <input type="password" name="confirmPassword" class="w-full block flex-1 bg-transparent rounded-lg py-3 pl-4
+                     text-gray-900 ring-1 ring-inset ring-gray-50 placeholder:text-gray-400
+                     placeholder:text-sm sm:text-sm sm:leading-6" placeholder="******" />
+                  </div>
+               </div>
+            </div>
+
+            <div class="pt-5">
+               <button type="submit" class="w-full text-lg font-semibold py-2 bg-blue-500 rounded-lg u">Créer le
+                  compte</button>
+            </div>
+            <p class="text-xs text-gray-500 pt-3">Avez-vous déjà compte ?
+               <a style="color: var(--blue-color);" class="cursor-pointer" routerLink="/log-in" routerLinkActive="active" ariaCurrentWhenActive="page">Se connecter</a>
+            </p>
+
+            <div class="flex items-center py-2">
+               <hr class="flex-1" />
+               <span class="w-auto mx-3 text-gray-400 text-xs font-medium">Ou continuer avec</span>
+               <hr class="flex-1" />
+            </div>
+
+            <div class="flex justify-center items-center gap-x-5">
+               <div class="google p-2 h-12 w-12 rounded-full bg-white shadow-sm shadow-gray-300">
+                  <img class="w-full h-full" src="./assets/img/google.png" alt="" />
+               </div>
+               <div class="facebook p-2 h-12 w-12 rounded-full bg-white shadow-sm shadow-gray-300">
+                  <img class="w-full h-full" src="./assets/img/facebook.png" alt="" />
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>
+</main>
