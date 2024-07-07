@@ -10,13 +10,24 @@
          <h1 class="text-3xl font-extrabold my-3">Création de compte</h1>
          <p class="text-xs text-gray-400 mb-5">Créez votre compte puis bénéficiez de la gestion automatisée de votre
             association en toute sécurité et libérez vous des routines!</p>
-         <form class="flex flex-col space-y-3" (ngSubmit)="onSubmit()">
+
+         <form [formGroup]="UserForm" (ngSubmit)="onSubmit()" class="flex flex-col space-y-3" >
             <div>
                <label class="block mb-1 text-base text-gray-400" for="email">Adresse E-mail</label>
                <div style="background-color: rgba(106, 202, 246, 0.123);" class="rounded-lg w-full">
-                  <input type="text" name="email" class="w-full block flex-1 bg-transparent rounded-lg py-3 pl-4
+                  <input formControlName="email" type="text" name="email" class="w-full block flex-1 bg-transparent rounded-lg py-3 pl-4
               text-gray-900 ring-1 ring-inset ring-gray-50 placeholder:text-gray-400
               placeholder:text-sm sm:text-sm sm:leading-6" placeholder="Ex: johndoe@gmail.com" />
+
+              <span class="text-red-600 italic text-sm"
+              *ngIf="(registerFormControl.email.touched || submitted) && registerFormControl.email.errors?.required">
+              <p>Email est obligatoire</p>
+               </span>
+               <span class="text-red-600 italic text-sm"
+                  *ngIf="registerFormControl.email.touched && registerFormControl.email.errors?.email">
+                  <p>Entrer une adresse email valide </p>
+               </span>
+
                </div>
             </div>
 
@@ -24,33 +35,64 @@
                <div>
                   <label class="block mb-1 text-base text-gray-400" for="nom">Nom</label>
                   <div style="background-color: rgba(106, 202, 246, 0.123);" class="rounded-lg w-full">
-                     <input type="text" name="nom" class="w-full block flex-1 bg-transparent rounded-lg py-3 pl-4
+                     <input formControlName="nom" type="text" name="nom" class="w-full block flex-1 bg-transparent rounded-lg py-3 pl-4
                      text-gray-900 ring-1 ring-inset ring-gray-50 placeholder:text-gray-400
                      placeholder:text-sm sm:text-sm sm:leading-6" placeholder="Votre nom*" />
+
+                     <span class="text-red-600 italic text-sm"
+                        *ngIf="(registerFormControl.nom.touched || submitted) && registerFormControl.nom.errors?.required">
+                           <p>Le nom est obligatoire</p>
+                     </span>
                   </div>
                </div>
                <div>
                   <label class="block mb-1 text-base text-gray-400" for="nom">Prénom</label>
                   <div style="background-color: rgba(106, 202, 246, 0.123);" class="rounded-lg w-full">
-                     <input type="text" name="prenom" class="w-full block flex-1 bg-transparent rounded-lg py-3 pl-4
+                     <input formControlName="prenom" type="text" name="prenom" class="w-full block flex-1 bg-transparent rounded-lg py-3 pl-4
                      text-gray-900 ring-1 ring-inset ring-gray-50 placeholder:text-gray-400
                      placeholder:text-sm sm:text-sm sm:leading-6" placeholder="Votre prenom*" />
+
+                     <span class="text-red-600 italic text-sm"
+                           *ngIf="(registerFormControl.prenom.touched || submitted) && registerFormControl.prenom.errors?.required">
+                           <p>Le Prenom est obligatoire</p>
+                     </span>
                   </div>
                </div>
                <div>
                   <label class="block mb-1 text-base text-gray-400" for="nom">Mot de passe</label>
                   <div style="background-color: rgba(106, 202, 246, 0.123);" class="rounded-lg w-full">
-                     <input type="password" name="password" class="w-full block flex-1 bg-transparent rounded-lg py-3 pl-4
+                     <input type="password" formControlName="password" name="password" class="w-full block flex-1 bg-transparent rounded-lg py-3 pl-4
                      text-gray-900 ring-1 ring-inset ring-gray-50 placeholder:text-gray-400
                      placeholder:text-sm sm:text-sm sm:leading-6" placeholder="******" />
+
+                     <span class="text-red-600 italic text-sm"
+               *ngIf="(registerFormControl.password.touched || submitted) && registerFormControl.password.errors?.required">
+               <p>Le mot de passe est obligatoire</p>
+               </span>
+                  <span class="text-red-600 italic text-sm"
+                     *ngIf="registerFormControl.password.touched && registerFormControl.password.errors?.invalidPassword">
+               <p> le mot de passe doit avoir au moin 8 characters, au moin 1 lettre majuscule, 1 lettre 
+                     minuscule et 1 nombre</p>
+               </span>
+
                   </div>
                </div>
                <div>
                   <label class="block mb-1 text-base text-gray-400" for="nom">Confirmer</label>
                   <div style="background-color: rgba(106, 202, 246, 0.123);" class="rounded-lg w-full">
-                     <input type="password" name="confirmPassword" class="w-full block flex-1 bg-transparent rounded-lg py-3 pl-4
+                     <input type="password" formControlName="confirmPassword" name="confirmPassword" class="w-full block flex-1 bg-transparent rounded-lg py-3 pl-4
                      text-gray-900 ring-1 ring-inset ring-gray-50 placeholder:text-gray-400
                      placeholder:text-sm sm:text-sm sm:leading-6" placeholder="******" />
+
+                     <span class="text-red-600 italic text-sm"
+                     *ngIf="(registerFormControl.confirmPassword.touched || submitted)&& registerFormControl.confirmPassword.errors?.required">
+                 <p> La confirmation du mot de passe est obligatoire</p>
+                 </span>
+                 <span class="text-red-600 italic text-sm"
+                     *ngIf="registerFormControl.confirmPassword.touched && registerFormControl.confirmPassword.errors?.passwordMismatch">
+                 <p> Le mot de passe ne correspond pas</p>
+                 </span>
+
                   </div>
                </div>
             </div>

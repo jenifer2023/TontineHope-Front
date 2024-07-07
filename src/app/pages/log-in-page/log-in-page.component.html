@@ -7,28 +7,49 @@
         <div class="h-16 w-16 overflow-hidden">
            <img class="w-full h-full" src="./logo-white.png" alt="" />
         </div>
-        <h1 class="text-3xl font-extrabold mt-3 mb-5">Bienvenue sur Tontine Hope</h1>
-        <form class="flex flex-col space-y-3" (ngSubmit)="onSubmit()">
-           <div>
-              <label class="block mb-1 text-base text-gray-400" for="nom">Nom d’utilisateur</label>
+        <h1 class=" text-3xl font-extrabold mt-3 mb-5">Bienvenue sur Tontine Hope</h1>
+
+        <form [formGroup]="UserForm" (ngSubmit)="onSubmit()" class="form flex flex-col space-y-3"  >
+
+           <div >
+              <label class="block mb-1 text-base text-gray-400" for="email">Adresse Mail</label>
               <div style="background-color: rgba(106, 202, 246, 0.123);" class="rounded-lg w-full">
-                 <input type="text" name="username" class="w-full block flex-1 bg-transparent rounded-lg py-3 pl-4
+                 <input type="email" formControlName="email"  class=" form-control w-full block flex-1 bg-transparent rounded-lg py-3 pl-4
               text-gray-900 ring-1 ring-inset ring-gray-50 placeholder:text-gray-400
-              placeholder:text-sm sm:text-sm sm:leading-6" placeholder="Votre nom*" />
+              placeholder:text-sm sm:text-sm sm:leading-6" placeholder="Votre adresse email*" />
+
+              <span class="text-red-600 italic text-sm"
+              *ngIf="(registerFormControl.email.touched || submitted) && registerFormControl.email.errors?.required">
+              <p>Email est obligatoire</p>
+               </span>
+               <span class="text-red-600 italic text-sm"
+                  *ngIf="registerFormControl.email.touched && registerFormControl.email.errors?.email">
+                  <p>Entrer une adresse email valide </p>
+               </span>
               </div>
            </div>
 
-           <div>
+           <div >
               <label class="block mb-1 text-base text-gray-400" for="nom">Mot de passe</label>
               <div style="background-color: rgba(106, 202, 246, 0.123);" class="rounded-lg w-full">
-                 <input type="password" name="password" class="w-full block flex-1 bg-transparent rounded-lg py-3 pl-4
+                 <input type="password" formControlName="password" name="password" class="w-full block flex-1 bg-transparent rounded-lg py-3 pl-4
               text-gray-900 ring-1 ring-inset ring-gray-50 placeholder:text-gray-400
               placeholder:text-sm sm:text-sm sm:leading-6" placeholder="Votre mot de passe*" />
               </div>
+
+              <span class="text-red-600 italic text-sm"
+               *ngIf="(registerFormControl.password.touched || submitted) && registerFormControl.password.errors?.required">
+               <p>Le mot de passe est obligatoire</p>
+               </span>
+                  <span class="text-red-600 italic text-sm"
+                     *ngIf="registerFormControl.password.touched && registerFormControl.password.errors?.invalidPassword">
+               <p> le mot de passe doit avoir au moin 8 characters, au moin 1 lettre majuscule, 1 lettre 
+                     minuscule et 1 nombre</p>
+               </span>
            </div>
 
            <div class="flex flex-1 justify-between items-center">
-              <div class="flex items-center">
+              <div class=" form-group flex items-center">
                  <input class="h-3 w-3 cursor-pointer" name="remember-me" type="checkbox" checked>
                  <label for="remember-me" class="text-xs text-gray-400 ml-1">Se souvenir de moi</label>
               </div>

@@ -3,6 +3,8 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { SignUpPageComponent } from './pages/sign-up-page/sign-up-page.component';
 import { LogInPageComponent } from './pages/log-in-page/log-in-page.component';
+import { TontineClassiqueComponent } from './pages/tontine-classique/tontine-classique.component';
+import { TontineStandardComponent } from './pages/tontine-standard/tontine-standard.component';
 
 export const routes: Routes = [
 
@@ -28,6 +30,18 @@ export const routes: Routes = [
     path: 'log-in',
     component: LogInPageComponent,
     title: 'TontineHope | Log In'
+  },
+
+  {
+    path: 'classique',
+    component: TontineClassiqueComponent,
+    title: 'TontineHope | Classique'
+  },
+
+  {
+    path: 'standard',
+    component: TontineStandardComponent,
+    title: 'TontineHope | Standard'
   },
 
 
