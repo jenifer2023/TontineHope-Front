@@ -4,13 +4,20 @@ import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CostumValidatorService } from '../../services/validators/costum-validator.service';
 import { FormsModule, ReactiveFormsModule,Validators,FormGroup, FormBuilder, } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-log-in-page',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterLink,
-   RouterLinkActive, ReactiveFormsModule, ],
+  imports: [
+   CommonModule,
+   TranslateModule,
+   FormsModule,
+   RouterLink,
+   RouterLinkActive,
+   ReactiveFormsModule,
+],
   templateUrl: './log-in-page.component.html',
   styleUrl: './log-in-page.component.css'
 })

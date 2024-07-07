@@ -6,8 +6,53 @@
    "a_propos": "A propos",
    "contact": "Contact",
 
-  "espoir": "Hope",
-  "bienvenu": "Bienvenue dans Tontine",
-  "bienvenu_text": "Le bon endroit pour la gestion automatisée de vos Tontines",
-  "commencer": "Commencer"
+   "espoir": "Hope",
+   "bienvenu": "Bienvenue dans Tontine",
+   "bienvenu_text": "Le bon endroit pour la gestion automatisée de vos Tontines",
+   "commencer": "Commencer",
+
+
+   "creer_compte": "Création de compte",
+   "creer_compte_text": "Créez votre compte puis bénéficiez de la gestion automatisée de votre association en toute sécurité et libérez vous des routines!",
+   "adresse_email": "Adresse E-mail",
+   "adresse_email_place": "Votre adresse email",
+   "email_requis": "Email est obligatoire",
+   "email_valide": "Entrer une adresse email valide",
+   "nom": "Nom",
+   "nom_place": "Votre nom*",
+   "nom_requis": "Le nom est obligatoire",
+   "prenom": "Prénom",
+   "prenom_place": "Votre prénom",
+   "prenom_requis": "Le prénom est obligatoire",
+   "mot_de_pass": "Mot de passe",
+   "mot_de_pass_requis": "Le mot de passe est obligatoire",
+   "mot_de_pass_regex": "le mot de passe doit avoir au moin 8 characters, au moin 1 lettre majuscule, 1 lettre minuscule et 1 nombre",
+   "mot_de_pass_confirm": "Confirmer",
+   "mot_de_pass_confirm_requis": "La confirmation du mot de passe est obligatoire",
+   "mot_de_pass_confirm_diff": "Les mots de passe ne sont pas identiques",
+
+   "creer_compte_action": "Créer le compte",
+   "deja_un_compte": "Avez-vous déjà compte ?",
+   "se_connecter": "Se connecter",
+   "continuer_avec": "Ou continuer avec",
+   "se_souvenir": "Se souvenir de moi",
+   "mot_pass_oublie": "Mot de passe oublié ?",
+   "pas_de_compte": "N’avez-vous pas de compte ?",
+
+
+   "tontine_classique": "Tontine Classique",
+   "tontine_classique_titre": "Bienvenue dans votre tontine classique le meilleur endroit pour vos simple cotisation sans stresse! Debutez a présent la configuration de votre tontine",
+   "tontine_classique_nom": "Nom de votre tontine",
+   "montant": "Montant",
+   "heure": "Heure",
+   "date_debut": "Date de début",
+   "frequence_cotisation": "Fréquence de cotisation",
+   "enregistrer": "Enregistrer",
+
+   "tontine_standard": "Tontine Standard",
+   "config_caisse": "Configuration des caisses",
+   "montant_min": "Entrez les montants minimum à perçevoir",
+   "fond_caisse": "Fonds de caisse",
+   "caisse_epargne": "Caisse d'apargne",
+   "caisse_amortissement": "Caisse d'amortissement"
 }

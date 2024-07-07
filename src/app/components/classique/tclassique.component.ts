@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-tclassique',
   standalone: true,
-  imports: [],
+  imports: [ TranslateModule],
   templateUrl: './tclassique.component.html',
   styleUrl: './tclassique.component.css'
 })
@@ -18,7 +19,6 @@ export class TClassiqueComponent {
     "En alternance d'une semaine",
     "Après chaque deux semaine",
     "Chaque mois",
-
   ];
 
 }

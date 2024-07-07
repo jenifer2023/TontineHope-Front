@@ -1,13 +1,56 @@
 {
-
    "accueil": "Home",
    "connexion": "Log In",
    "inscription": "Sign Up",
    "a_propos": "About",
    "contact": "Contact",
-
    "espoir": "Hope",
    "bienvenu": "Welcome to Tontine",
    "bienvenu_text": "The right place for automated management of your Tontines",
-   "commencer": "Begin"
- }
+   "commencer": "Begin",
+
+   "creer_compte": "Create an account",
+   "creer_compte_text": "Create your account and benefit from the automated management of your association in complete security and free yourself from routine!",
+   "adresse_email": "E-mail address",
+   "adresse_email_place": "Your e-mail address",
+   "email_requis": "Email is required",
+   "email_valide": "Enter a valid email address",
+   "nom": "Name",
+   "nom_place": "Your name",
+   "nom_requis": "Name is required",
+   "prenom": "First name",
+   "prenom_place": "Your first name",
+   "prenom_requis": "First name is required",
+   "mot_de_pass": "Password",
+   "mot_de_pass_requis": "Password is required",
+   "mot_de_pass_regex": "the password must have at least 8 characters, at least 1 uppercase letter, 1 lowercase letter and 1 number",
+   "mot_de_pass_confirm": "Confirm",
+   "mot_de_pass_confirm_requis": "Password confirmation required",
+   "mot_de_pass_confirm_diff": "Passwords are not the same",
+   "creer_compte_action": "Create account",
+   "deja_un_compte": "Do you already have an account?",
+   "se_connecter": "Login",
+   "continuer_avec": "Or continue with",
+
+   "se_souvenir": "Remember me",
+   "mot_pass_oublie": "Forgot your password?",
+   "pas_de_compte": "Don't you have an account?",
+
+
+   "tontine_classique": "Classic Tontine",
+   "tontine_classique_titre": "Welcome to your classic tontine, the best place for stress-free contributions! Start now the configuration of your tontine",
+   "tontine_classique_nom": "Name of your tontine",
+   "montant": "Amount",
+   "heure": "Hour",
+   "date_debut": "Start date",
+   "frequence_cotisation": "Contribution frequency",
+   "enregistrer": "Save",
+
+   "tontine_standard": "Standard Tontine",
+   "config_caisse": "Cash desk configuration",
+   "montant_min": "Enter minimum amounts to be collected",
+   "fond_caisse": "Cash funds",
+   "caisse_epargne": "Savings bank",
+   "caisse_amortissement": "Sinking fund"
+
+}
