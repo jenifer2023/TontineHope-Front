@@ -1,53 +1,47 @@
-
-<main class="bg-fixed bg-cover bg-center h-screen border-2  w-full  bg-green-300   "  
-     style="background-image: url('./assets/img/home.jpg');">
-     <div>
-        
-     </div>
-    <app-navbar></app-navbar>
-     <div >
-            <h1 class=" text-3xl font-extrabold text-center mt-3 mb-5"><span class="">Bienvenue dans Tontine</span> <span class="text-blue-500">Hope</span>  </h1>
-            <h3 class="text-2xl text-center font-bold mt-3 mb-5">Le bonne endroit pour la gestion automatisée de vos Tontines</h3>
-            
-            <div >
-                
-                <div class="container  mt-10 px-4  ">
-                    <button class="border-2 border-blue-500  px-20 rounded-full p-3 mt-5 bg-blue-500 font-semibold">Commencer</button>
-                </div>
-            </div>    
-        </div>
+<main class="bg-fixed bg-cover bg-center h-screen w-full" style="background-image: url('./assets/img/home.jpg');">
+   <div style="background-color: rgba(13, 12, 12, 0.612);" class="h-full text-white">
+      <app-navbar></app-navbar>
+      <div class="mt-10 md:mt-36 lg:mt-60">
+         <h1 class="text-2xl md:text-6xl font-extrabold text-center mt-3 mb-5">{{ 'bienvenu' | translate }}
+            <span class="text-blue-500"> {{ 'espoir' | translate }}</span>
+         </h1>
+         <h3 class="text-lg font-medium text-center mt-3">{{ 'bienvenu_text' | translate }}</h3>
+         <div class="mt-16 flex justify-center">
+            <button class="w-[220px] rounded-full py-3 bg-blue-500 font-semibold text-xl">{{
+               'commencer' | translate }}</button>
+         </div>
+      </div>
+   </div>
 </main>
 
 
 
 
-
-
 <!-- <main class=""> -->
-    <!-- <img class="w-full h-screen " src="./assets/img/bg.jpg" alt="" /> -->
-    <!-- <div class="border-2 border-blue-400 h-screen w-full">
+<!-- <img class="w-full h-screen " src="./assets/img/bg.jpg" alt="" /> -->
+<!-- <div class="border-2 border-blue-400 h-screen w-full">
         <img class="w-1/2 h-auto" src="./assets/img/Partnership-bro.png" alt="" />
 
 
     </div> -->
-    <!-- <div > -->
-        <!-- <div  class="hidden md:flex justify-center items-center ">
+<!-- <div > -->
+<!-- <div  class="hidden md:flex justify-center items-center ">
            <img class="w-full h-screen " src="./assets/img/bg.jpg" alt="" />
         </div> -->
 
-        <!-- <div >
+<!-- <div >
             <h1 class=" text-3xl font-extrabold text-center mt-3 mb-5">Bienvenue dans Tontine<span class="text-blue-500">Hope</span>  </h1>
             <h3 class="text-2xl text-center font-bold mt-3 mb-5">Le bonne endroit pour la gestion automatisée de vos Tontines</h3>
             <p class="text-center">Tontine Hope Lorem ipsum dolor sit amet consectetu
                 r adipisicing elit. Incidunt nobis assumenda vitae
-                 temporibus dicta suscipit, sequi reprehenderit voluptatem, alias quia 
+                 temporibus dicta suscipit, sequi reprehenderit voluptatem, alias quia
                 quasi itaque. Veniam repellat quam minima aliquid ea ratione temporibus?</p>
 
             <div >
                 <button class="border-2 border-blue-500 px-20 rounded-full p-3 mt-5 bg-blue-500 font-semibold">Commencer</button>
-            </div>    
+            </div>
         </div> -->
-        
-    <!-- </div> -->
-    
+
+<!-- </div> -->
+
 <!-- </main> -->

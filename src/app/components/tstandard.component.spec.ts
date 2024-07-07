@@ -11,7 +11,7 @@ describe('TstandardComponent', () => {
       imports: [TstandardComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(TstandardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -2,7 +2,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { CostumValidatorService } from '../../services/costum-validator.service';
+import { CostumValidatorService } from '../../services/validators/costum-validator.service';
 import { FormsModule, ReactiveFormsModule,Validators,FormGroup, FormBuilder, } from '@angular/forms';
 
 
